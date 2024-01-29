@@ -1,0 +1,148 @@
+* {
+    font-family: 'Gothic A1', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#budget-container {
+    width: 100%; /* Increased width */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#budget-container h1, p {
+    text-align: center;
+}
+
+#budget-container h1 {
+    color: #D1C000;
+}
+
+#budget-container span {
+    color: #0C5E69;
+}
+
+#balance {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#summary {
+    margin-top: 50px;
+    display: flex; /* Displaying #summary as flex */
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#summary div {
+    display: flex;
+    width: 300px;
+    height: 100px;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #fff;
+    color: white;
+}
+
+#summary div h3 {
+    background-color: #0C5E69;
+    width: 300px;
+    margin: 0;
+    padding: 20px;
+    height: 50px;
+    text-align: center;
+
+}
+
+#summary div p {
+    color: black;
+}
+
+
+#transactionsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+#transactionsTable th,
+#transactionsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#transactionsTable th {
+    background-color: #0C5E69;
+    height: 50px;
+    color: #ffffff;
+}
+
+#transactionsTable caption {
+    color: #D1C000;
+    font-size: 24px;
+}
+
+#addTransactionForm {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+#addTransactionForm input {
+    padding: 8px;
+    height: 50px;
+    width: 25%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+form select {
+    padding: 8px;
+    font-size: 16px;
+    width: 25%;
+    height: 50px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+#addTransactionForm button {
+    flex: 1;
+    background-color: #0C5E69;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+#addTransactionForm button:hover {
+    background-color: #D1C000;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}

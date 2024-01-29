@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Gothic A1' rel='stylesheet'>
+    <title>Budget Tracker</title>
+</head>
+<body>
+<div id="budget-container">
+    <h1><span>B</span>udget</h1>
+    <p>Gestion de Budget</p>
+
+    <div id="summary">
+        <div class="summary-one">
+            <h3>Budget</h3>
+            <p id="totalIncomes">0.00 FCFA</p>
+        </div>
+        <div class="summary-two">
+            <h3>Dépenses</h3>
+            <p id="totalExpenses">0.00 FCFA</p>
+        </div>
+        <div class="summary-three">
+            <h3>Solde</h3>
+            <p id="balanceAmount">0.00 FCFA</p>
+        </div>
+    </div>
+
+    <div>
+        <form id="addTransactionForm">
+            <label for="transactionType"></label>
+            <select id="transactionType">
+                <option value="revenu">Revenu</option>
+                <option value="dépense">Dépense</option>
+            </select>
+            <label for="transactionDescription"></label>
+            <input type="text" id="transactionDescription" placeholder="Description">
+            <label for="transactionAmount"></label>
+            <input type="number" id="transactionAmount" placeholder="Montant">
+
+            <button type="button" onclick="addTransaction()">Valider</button>
+        </form>
+    </div>
+    <br>
+    <table id="transactionsTable">
+        <caption>Listes des Transactions</caption>
+        <thead>
+        <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Montant</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="transactions"></tbody>
+    </table>
+
+
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
