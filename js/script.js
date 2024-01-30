@@ -100,9 +100,9 @@ function updateTransactionTable() {
         const cellAmount = transactionRow.insertCell(2);
         const cellAction = transactionRow.insertCell(3);
 
-        cellName.textContent = transactions[i].description;
-        cellAmount.textContent = `${transactions[i].amount} F CFA`;
         cellType.textContent = transactions[i].type.charAt(0).toUpperCase() + transactions[i].type.slice(1);
+        cellName.textContent = transactions[i].description;
+        cellAmount.textContent = `${transactions[i].amount}F CFA`;
         cellAction.innerHTML = `<button onclick="removeTransaction(${transactions[i].amount}, '${transactions[i].type}', ${i + 1})" class="delete-btn">Supprimer</button>`;
     }
 }
