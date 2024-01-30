@@ -27,14 +27,15 @@ function updateSummary() {
 
 // Fonction pour ajouter une transaction
 function addTransaction() {
+    const typeInput = document.getElementById('transactionType');
     const descriptionInput = document.getElementById('transactionDescription');
     const amountInput = document.getElementById('transactionAmount');
-    const typeInput = document.getElementById('transactionType');
+   
 
+    const type = typeInput.value;
     const description = descriptionInput.value.trim();
     const amount = parseFloat(amountInput.value);
-    const type = typeInput.value;
-
+  
     // Vérification des données saisies
     if (description === '' || isNaN(amount) || !['revenu', 'dépense'].includes(type)) {
         alert('Données saisies invalide !');
@@ -53,9 +54,9 @@ function addTransaction() {
 
     // Ajout de la transaction à la liste
     transactions.push({
+        type: type,
         description: description,
-        amount: amount.toFixed(2),
-        type: type
+        amount: amount.toFixed(2)
     });
 
     // Mise à jour de l'affichage
