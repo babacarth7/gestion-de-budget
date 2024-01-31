@@ -47,11 +47,11 @@
     gap: 10px;
     flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
     box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #fff;
     color: white;
 }
+
 
 #summary div h3 {
     background-color: #0C5E69;
@@ -90,6 +90,7 @@
 #transactionsTable caption {
     color: #D1C000;
     font-size: 24px;
+    padding: 8px;
 }
 
 #addTransactionForm {
@@ -145,4 +146,39 @@ form select {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+}
+
+/* Styles réactifs pour les écrans plus petits (jusqu'à 600px) */
+@media only screen and (max-width: 600px) {
+    #budget-container {
+        width: 100%; 
+    }
+
+    #summary {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    #summary div {
+        width: 100%; 
+        height: 100px;
+    }
+
+    #summary div h3 {
+        background-color: #0C5E69;
+        width: 100%; 
+        margin: 0;
+        padding: 20px;
+        height: 50px;
+        text-align: center;
+    }
+
+    #addTransactionForm input,
+    form select {
+        width: calc(50% - 10px); 
+    }
+
+    #addTransactionForm button {
+        width: 100%;
+    }
 }
