@@ -42,6 +42,12 @@ function addTransaction() {
         return;
     }
 
+      // Vérification du solde avant d'ajouter une dépense
+      if (type === 'dépense' && amount > balance) {
+        alert('Le montant de la dépense ne peut pas dépasser le solde actuel.');
+        return;
+    }
+
     // Mise à jour des totaux
     if (type === 'revenu') {
         totalIncomes += amount;
